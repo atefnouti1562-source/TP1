@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exo07 - Formulaire d’inscription</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.5;
+    }
+    form {
+      max-width: 600px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      border: 2px solid #0078d7;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+      color: #0078d7;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Créer un compte</h1>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Identité</legend>
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="prenom" required>
+
+      <label for="dateNaissance">Date de naissance :</label>
+      <input type="date" id="dateNaissance" name="dateNaissance" min="1900-01-01" max="2025-10-16" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact</legend>
+      <label for="telephone">Téléphone :</label>
+      <input type="tel" id="telephone" name="telephone"
+             pattern="^0[5-7]\d{8}$"
+             title="Le numéro doit commencer par 05, 06 ou 07 et contenir 10 chiffres." 
+             required>
+
+      <label for="site">Site personnel :</label>
+      <input type="url" id="site" name="site" placeholder="https://exemple.com">
+    </fieldset>
+
+    <fieldset>
+      <legend>Sécurité</legend>
+      <label for="motdepasse">Mot de passe :</label>
+      <input type="password" id="motdepasse" name="motdepasse" minlength="8" required>
+
+      <label for="confirmation">Confirmation du mot de passe :</label>
+      <input type="password" id="confirmation" name="confirmation" minlength="8" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Préférences</legend>
+      <label>
+        <input type="checkbox" name="newsletter"> S’abonner à la newsletter
+      </label>

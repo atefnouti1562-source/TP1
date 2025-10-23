@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header, nav, main, aside, footer {
+            padding: 20px;
+            margin: 10px;
+        }
+        header {
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        article {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        aside {
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+        footer {
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo du site" width="50">
+        <h1>Mon Mini Blog</h1>
+    </header>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Premier Article</h2>
+            <time datetime="2025-10-16">16 octobre 2025</time>
+            <p>Ceci est un petit résumé du premier article. Il parle de divers sujets intéressants à explorer.</p>
+            <a href="#">Lire plus</a>
+        </article>
+
+        <article>
+            <h2>Deuxième Article</h2>
+            <time datetime="2025-10-15">15 octobre 2025</time>
+            <p>Voici un résumé du deuxième article. Il contient des informations utiles pour nos lecteurs.</p>
+            <a href="#">Lire plus</a>
+        </article>
+
+        <aside>
+            <h3>À propos</h3>
+            <p>Bienvenue sur mon mini-blog ! Ici, vous trouverez des articles sur différents sujets qui me passionnent.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="annee"><?php echo date(
